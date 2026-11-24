@@ -10,9 +10,9 @@
 ##    print(code[-num] + code[0:len(code)-num])
 
 def ScrambleIt(msg,key):
-    c = msg[-key:]
-    out = c + msg[0:len(msg) - key]
-    return out
+    c = msg[-key:] #grabs last x amount of letters
+    out = c + msg[0:len(msg) - key]#Grabs c + first len letters - key
+    return out #returns ScrambleIt as out
 
 key = int(input('Number? '))
 messages = []
