@@ -14,14 +14,14 @@ def ScrambleIt(msg,key):
     out = c + msg[0:len(msg) - key]#Grabs c + first len letters - key
     return out #returns ScrambleIt as out
 
-key = int(input('Number? '))
-messages = []
-msg = input('Code? ')
+key = int(input('Number? ')) #get key for scramble
+messages = [] #set messages as a list
+msg = input('Code? ') #get message from agent
 
-while msg != '':
-    scram = ScrambleIt(msg,key)
-    messages.append(scram)
-    msg = input('Code? ')
-print(key)
-for word in messages:
-    print(word)
+while msg != '': #if msg is not blank run the indented
+    scram = ScrambleIt(msg,key) #Defined variable at top
+    messages.append(scram) #adds the value of scram to the list
+    msg = input('Code? ') #gets msg again
+print(key) #prints the key for reference
+for word in messages: # for very word in the list run the indented
+    print(word) #Prints the word value
